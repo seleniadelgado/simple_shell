@@ -4,25 +4,27 @@ Creating a shell from scratch using only the c programming language.
 
 ## Getting Started
 
+Instructions on how to use our SHELL.
+
 ### Compiation
 
 Your shell will be compiled this way:
----
+```
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
----
+```
 
 ### Testing
 Your shell should work like this in interactive mode:
----
+```
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
 ($)
 ($) exit
 $
----
+```
 But also in non-interactive mode:
----
+```
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
 $
@@ -34,10 +36,10 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
----
+```
 
 ## List of allowed functions and system calls
----
+```
 * access (man 2 access)
 * chdir (man 2 chdir)
 * close (man 2 close)
@@ -68,7 +70,7 @@ $
 * _exit (man 2 _exit)
 * isatty (man 3 isatty)
 * fflush (man 3 fflush)
----
+```
 
 ## Versioning
 

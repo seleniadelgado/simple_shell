@@ -40,6 +40,6 @@ void free_list(list_t *head);
 int matchpath(const char *s1, char *s2);
 char *_getenv(const char *name);
 int print_PATH_ENV(void);
-int (*_get_built_ins(char *s))(int, int)
+int (*_get_built_ins(char *s))(int, int);
 
-#endif _BENGIE_H
+#endif

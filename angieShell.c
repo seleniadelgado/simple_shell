@@ -10,18 +10,21 @@ int main()
         int i = 1;
         ssize_t chars;
 
+
         while (1)
         {
                 write(STDIN_FILENO, "$ ", 2);
                 child_pid = fork();
                 if (child_pid == -1)
+			perror("fork() Error")
                         return (-1);
                 if (child_pid == 0)
                 {
                         chars = (getline(&buffer, &buffsize, stdin));
                         if (chars == - 1)
                         {
-                                return (-1);
+				perror ("getline error")
+				return (-1);
                         }
                         if ((buffer)[chars - 1] == '\n')
                         {
@@ -36,8 +39,8 @@ int main()
 			if (execve(token[0], token, NULL) == -1)
                         {
                                 perror("Error on Execve");
-                        }
-                        return (-1);
+				return (-1);
+			}
                 }
                 if (child_pid > 0)
                 {

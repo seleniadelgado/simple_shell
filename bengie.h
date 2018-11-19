@@ -7,11 +7,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 
-/**
- * @environ: points to an array of pointers to strings.
- */
-
-extern char** environ;
+extern char **environ;
 
 /**
  * struct list_s - singly linked list
@@ -21,8 +17,8 @@ extern char** environ;
 
 typedef struct list_s
 {
-        char *str;
-        struct list *next;
+	char *str;
+	struct list *next;
 } list_t;
 
 /**
@@ -32,8 +28,8 @@ typedef struct list_s
  */
 typedef struct op
 {
-        char *op;
-        int (*f)(char *a);
+	char *op;
+	int (*f)(char *a);
 } op_t;
 
 list_t *add_node_end(list_t **head, char *str);

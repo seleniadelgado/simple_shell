@@ -38,4 +38,5 @@ int matchpath(const char *s1, char *s2);
 char *_getenv(const char *name);
 int print_PATH_ENV(void);
 int (*_get_built_ins(char *s))(int, int);
+void print_env(void);
 #endif

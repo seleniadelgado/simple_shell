@@ -20,7 +20,7 @@ void sigHandler(int bob)
  * Return: Nothing
  */
 
-int main()
+int main(void)
 {
 	pid_t child_pid = 0;
 	char *buffer; /** gets command line */
@@ -40,7 +40,7 @@ int main()
 		}
 		signal(SIGINT, sigHandler);
 
-                /*write(STDIN_FILENO, "$ ", 2);*/
+/*write(STDIN_FILENO, "$ ", 2);*/
 		child_pid = fork();
 		if (child_pid == -1)
 		{
@@ -50,7 +50,7 @@ int main()
 		{
 			chars = (getline(&buffer, &buffsize, stdin));
 
-			if (chars == - 1)
+			if (chars == -1)
 			{
 				if (isatty(0))
 				{

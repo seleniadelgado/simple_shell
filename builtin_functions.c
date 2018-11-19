@@ -1,10 +1,17 @@
 #include "bengie.h"
 
-int (*_get_built_ins(char *s))(char **agrs)
+/**
+ * _get_built_ins - a function that goes through the data structure.
+ * @s:
+ * @args:
+ *
+ * Return: function pointer.
+ */
+
+char (*_get_built_ins(char *s))(char **agrs, char **hj)
 {
 	op_t ops[] = {
 		{"env", print_env},
-		{"exit", builtin_exit},
 		{NULL, NULL}
 	};
 
@@ -13,7 +20,7 @@ int (*_get_built_ins(char *s))(char **agrs)
 	i = 0;
 	while (ops[i].op != NULL)
 	{
-		if (strcmp(ops[i].op, *s, strlen(ops[i].op)) == 0)
+		if (_strcmp(ops[i].op, *s) == 0)
 		{
 			break;
 		}

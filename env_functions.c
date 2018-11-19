@@ -43,7 +43,7 @@ char *_getenv(const char *name)
 
 /* Where the environment variable 'PATH' is set to a value. */
 
-int main(void)
+void print_env(void)
 {
         char *string;
         char *name = "PATH";
@@ -55,5 +55,4 @@ int main(void)
                 ;
         write(STDIN_FILENO, string, i);
         write(STDIN_FILENO, "\n", 1);
-        return (0);
 }

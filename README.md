@@ -12,9 +12,9 @@ Our shell can be compiled this way, with the executable:
 ```
 gcc -Wall -Werror -Wextra -pedantic *.c -o angieShell
 ```
-...
+```
 ./angieShell
-...
+```
 
 ### Testing
 Our shell should work like this in interactive mode:

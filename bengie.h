@@ -6,18 +6,19 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <signal.h>
-/**
- * @environ: points to an array of pointers to strings.
- */
-extern char** environ;
+
+extern char **environ;
 
 /**
- * typedef struct for linked lists for
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @next: points to the next node
  */
+
 typedef struct list_s
 {
-        char *str;
-        struct list *next;
+	char *str;
+	struct list *next;
 } list_t;
 
 /**
@@ -27,8 +28,8 @@ typedef struct list_s
  */
 typedef struct op
 {
-        char *op;
-        int (*f)(char *a);
+	char *op;
+	int (*f)(char *a);
 } op_t;
 
 list_t *add_node_end(list_t **head, char *str);
@@ -37,6 +38,7 @@ void free_list(list_t *head);
 int matchpath(const char *s1, char *s2);
 char *_getenv(const char *name);
 int print_PATH_ENV(void);
-int (*_get_built_ins(char *s))(int, int);
 void print_env(void);
+int (*_get_built_ins(char *s))(char **agrs);
+
 #endif

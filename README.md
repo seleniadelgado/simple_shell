@@ -1,20 +1,23 @@
 # simple_shell
 
-Creating a shell from scratch using only the c programming language.
+Creating a simple UNIX shell from scratch using only the c programming language.
 
-## Getting Started
+## Description
 
-Instructions on how to use our SHELL.
+Our Shell is called **Bengie**. Which executes commands typed in as input.
 
-### Compiation
+### Compilation
 
-Your shell will be compiled this way:
+Our shell can be compiled this way, with the executable:
 ```
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+gcc -Wall -Werror -Wextra -pedantic *.c -o angieShell
 ```
+...
+./angieShell
+...
 
 ### Testing
-Your shell should work like this in interactive mode:
+Our shell should work like this in interactive mode:
 ```
 $ ./hsh
 ($) /bin/ls
@@ -38,7 +41,16 @@ hsh main.c shell.c test_ls_2
 $
 ```
 
-## List of allowed functions and system calls
+### Built-in Commands
+* **exit**
+  * Type in: exit
+  * Exits the shell.
+
+* **env**
+  * Type in: env
+  * Prints the current environment.
+
+## List of allowed functions and system calls we used for Bengie
 ```
 * access (man 2 access)
 * chdir (man 2 chdir)
@@ -71,10 +83,6 @@ $
 * isatty (man 3 isatty)
 * fflush (man 3 fflush)
 ```
-
-## Versioning
-
-We used Ubuntu 14.04 to create and tst out our SHELL.
 
 ## Authors
 

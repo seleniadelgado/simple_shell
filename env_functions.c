@@ -1,13 +1,10 @@
 #include "bengie.h"
-
 /**
  * matchpath - a function that finds path in the environment.
  * @s1: a pointer to the first string/name
  * @s2: a pointer to the second string/path
- *
  * Return: 0 if successful or -1 if failed.
  */
-
 int matchpath(const char *s1, char *s2)
 {
 	int i = 0;
@@ -25,11 +22,9 @@ int matchpath(const char *s1, char *s2)
 		return (-1);
 	}
 }
-
 /**
  * _getenv - a function that finds the current environment variable.
  * @name: the name of the environment varaible to get.
- *
  * Return: the string of the environmental variable
  */
 char *_getenv(const char *name)
@@ -48,10 +43,8 @@ char *_getenv(const char *name)
 	}
 	return (NULL);
 }
-
 /**
  * print_env - a function that prints out the current environment variable.
- *
  * Return: nothing
  */
 void print_env(void)
@@ -67,10 +60,8 @@ void print_env(void)
 	write(STDIN_FILENO, string, i);
 	write(STDIN_FILENO, "\n", 1);
 }
-
 /**
  * delim_path - a function that delimits the path.
- *
  * Return: nothing
  */
 void delim_path(void)

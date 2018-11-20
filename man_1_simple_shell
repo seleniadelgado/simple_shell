@@ -11,6 +11,21 @@ inputs into the keyboard. The user will be able to input any command.
 Options can be inputed into the shell. The shell will iterate through each
 command that is inputed and check it against the path to make sure it is a
 builtin command. If it is, it will then print te result in the terminal.
+
+.B exit
+.RS
+Type in: \fBexit\fR
+
+- Exits the Shell.
+.RE
+
+.B env
+.RS
+Type in: \fBenv\fR
+
+- Prints the current environment.
+.RE
+
 .SH RETURN VALUE
 Return Value is 0 upon success.
 .SH EXAMPLES

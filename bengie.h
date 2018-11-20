@@ -26,5 +26,6 @@ int print_PATH_ENV(void);
 void print_env(void);
 char (*_get_built_ins(char *s))(char **agrs, char **hj);
 int _strcmp(char *s1, char *s2);
+void delim_path(void);
 
 #endif

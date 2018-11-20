@@ -1,3 +1,4 @@
+
 #include "bengie.h"
 /**
  * sigHandler - a function that handles CTRL+C
@@ -43,7 +44,8 @@ int main(void)
 			token[0] = strtok(buffer, " ");
 			for (i = 0; token[i] != NULL; i++)
 			{
-				token[i] = strtok(NULL, " ");
+				token[++i] = strtok(NULL, " ");
+				i--;
 			}
 			if (execve(token[0], token, NULL) == -1)
 				perror("Error on Execve");

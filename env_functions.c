@@ -67,3 +67,35 @@ void print_env(void)
 	write(STDIN_FILENO, string, i);
 	write(STDIN_FILENO, "\n", 1);
 }
+
+/**
+ * delim_path - a function that delimits the path.
+ *
+ * Return: nothing
+ */
+void delim_path(void)
+{
+	char *string;
+	char *name = "PATH";
+	int i;
+	char *trent[1024];
+	int k = 0;
+
+	string = _getenv(name);
+
+	for (i = 0; string[i]; i++)
+		;
+	trent[k] = strtok(string, ":");
+
+	while (trent[k] != NULL)
+	{
+		k++;
+		trent[k] = strtok(NULL, ":");
+	}
+	k = 0;
+	while (trent[k] != NULL)
+	{
+		printf("trent = %s", trent[k]);
+		k++;
+	}
+}

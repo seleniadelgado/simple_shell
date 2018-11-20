@@ -6,14 +6,28 @@ Creating a simple UNIX shell from scratch using only the c programming language.
 
 Our Shell is called **Bengie**. Which executes commands typed in as input.
 
+Our Shell should:
+
+* Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+* The prompt is displayed again each time a command has been executed.
+* The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+* The command lines are made only of one word. No arguments will be passed to programs.
+* If an executable cannot be found, print an error message and display the prompt again.
+* Handle errors.
+* You have to handle the “end of file” condition (Ctrl+D)
+
+### Signals
+
+While running our Shell in interactive mode, **Bengie** ignores the keyboard input `Ctrl + c` and 'Ctrl + d'.
+
 ### Compilation
 
 Our shell can be compiled this way, with the executable:
 ```
-gcc -Wall -Werror -Wextra -pedantic *.c -o angieShell
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 ```
-./angieShell
+./hsh
 ```
 
 ### Testing
@@ -42,6 +56,9 @@ $
 ```
 
 ### Built-in Commands
+
+Our Shell handles 2 Built-in commands:
+
 * **exit**
   * Type in: exit
   * Exits the shell.
